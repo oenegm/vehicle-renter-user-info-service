@@ -1,4 +1,4 @@
-package com.project.userinfoservice
+package com.vehiclerenter.userinfoservice
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

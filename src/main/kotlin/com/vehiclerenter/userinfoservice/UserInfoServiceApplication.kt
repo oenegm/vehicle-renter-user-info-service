@@ -1,4 +1,4 @@
-package com.project.userinfoservice
+package com.vehiclerenter.userinfoservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
