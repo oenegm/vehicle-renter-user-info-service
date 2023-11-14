@@ -41,7 +41,6 @@ services:
   user-info-db:
     image: 'postgres:latest'
     environment:
-      - 'POSTGRES_DB=user-info'
       - 'POSTGRES_PASSWORD=password'
       - 'POSTGRES_USER=postgres'
     ports:
@@ -56,8 +55,8 @@ services:
 
   user-info-service:
     container_name: user-info-service
-    build: ./user-info-service
-    image: user-info-service:latest
+    build: .
+#    image: user-info-service:latest
     depends_on:
       user-info-db:
         condition: service_healthy
