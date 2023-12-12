@@ -55,13 +55,12 @@ services:
 
   user-info-service:
     container_name: user-info-service
-    build: .
-#    image: user-info-service:latest
+    build:
+      context: .
+    image: user-info-service:latest
     depends_on:
       user-info-db:
         condition: service_healthy
-    #      config-server:
-    #        condition: service_started
     environment:
       - 'DB_URL=jdbc:postgresql://user-info-db:5432/postgres'
       - 'DB_USERNAME=postgres'
@@ -73,6 +72,7 @@ services:
       - "8084:8084"
     networks:
       - "backend"
+
 
 networks:
   backend:
